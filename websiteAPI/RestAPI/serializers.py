@@ -1,5 +1,11 @@
-from websiteAPI.RestAPI.models import User
+from websiteAPI.RestAPI.models import User, Department
 from rest_framework import serializers
+
+
+class DepartmentSerializer(serializers.HyperlinkedModelSerializer):
+    class Meta:
+        model = Department
+        fields = "__all__"
 
 
 class UserSerializer(serializers.HyperlinkedModelSerializer):
